@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Booking">Бронирование</string>
+    <string name="Information">Информация о покупателе</string>
+    <string name="NumberPhone">Номер телефона</string>
+    <string name="Mail">Почта</string>
+    <string name="Name">Имя</string>
+    <string name="Surname">Фамилия</string>
+    <string name="DateOfBirth">Дата рождения</string>
+    <string name="Citizenship">Гражданство</string>
+    <string name="PassportNumber">Номер загранпаспорта</string>
+    <string name="PassportValidityPeriod">Срок действия загранпаспорта</string>
+    <string name="AddTourist">Добавить туриста</string>
+    <string name="FirstTourist">Первый турист</string>
+    <string name="five">5</string>
+    <string name="Perfect">Превосходно</string>
+    <string name="Night">%1 ночей</string>
+    <string name="tourist">Дополнительный турист</string>
+    <string name="imail">mail.ru</string>
+    <string name="phone">+7 *** *** ** **</string>
+</resources>

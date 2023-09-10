@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_grey"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clHotelFirst"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_hotel_screen_first">
+
+                <TextView
+                    android:id="@+id/tvHotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center"
+                    android:text="@string/hotel"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/sfpro_display"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHotel"
+                    android:layout_width="343dp"
+                    android:layout_height="257dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/bg_hotel_image"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvHotel"
+                    tools:listitem="@layout/item_hotel" />
+
+                <FrameLayout
+                    android:id="@+id/flRatingContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvHotel">
+
+                    <include
+                        android:id="@+id/inRating"
+                        layout="@layout/layout_rating" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/tvPlace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/sfpro_display"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/flRatingContainer"
+                    tools:text="Steigenberger Makadi" />
+
+                <TextView
+                    android:id="@+id/tvPlaceCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/sfpro_display"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlace"
+                    tools:text="Madinat Makadi, Safaga Road, Makadi Bay, Египет" />
+
+                <TextView
+                    android:id="@+id/tvMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/money"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/sfpro_display"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlaceCity"
+                    tools:text="от 134 673 ₽" />
+
+                <TextView
+                    android:id="@+id/tvTur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:textColor="@color/black_grey"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/sfpro_display"
+                    app:layout_constraintBottom_toBottomOf="@id/tvMoney"
+                    app:layout_constraintStart_toEndOf="@id/tvMoney"
+                    app:layout_constraintTop_toTopOf="@id/tvMoney"
+                    tools:text="за тур с перелётом" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clHotelSecond"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_hotel_screen_second"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clHotelFirst">
+
+                <LinearLayout
+                    android:id="@+id/llPeculiarities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAboutHotel">
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flPeculiarities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:alignContent="stretch"
+                        app:alignItems="stretch"
+                        app:flexWrap="wrap">
+
+                        <TextView
+                            android:id="@+id/tvLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/bg_data_hotel"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:textColor="@color/black_grey"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/sfpro_display"
+                            tools:text="@string/tree_line" />
+
+                        <TextView
+                            android:id="@+id/tvWiFi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/bg_data_hotel"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:textColor="@color/black_grey"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/sfpro_display"
+                            tools:text="@string/wi_fi" />
+
+                        <TextView
+                            android:id="@+id/tvAirport"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:background="@drawable/bg_data_hotel"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:textColor="@color/black_grey"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/sfpro_display"
+                            tools:text="@string/airport" />
+
+                        <TextView
+                            android:id="@+id/tvBeach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:background="@drawable/bg_data_hotel"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:textColor="@color/black_grey"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/sfpro_display"
+                            tools:text="@string/beach" />
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAboutHotel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/about_hotel"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/sfpro_display"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_data_hotel"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/sfpro_display"
+                    app:layout_constraintStart_toStartOf="@id/llPeculiarities"
+                    app:layout_constraintTop_toBottomOf="@id/llPeculiarities"
+                    tools:text="Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvDescription">
+
+                    <com.example.hotel.customview.Row
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@drawable/ic_smile"
+                        app:subtitleText="Самое необходимое"
+                        app:titleText="Удобстава" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginStart="35dp"
+                        android:background="@color/black_grey" />
+
+                    <com.example.hotel.customview.Row
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@drawable/ic_stick"
+                        app:subtitleText="Самое необходимое"
+                        app:titleText="Что включено" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginStart="35dp"
+                        android:background="@color/black_grey" />
+
+                    <com.example.hotel.customview.Row
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:leftIcon="@drawable/ic_close"
+                        app:subtitleText="Самое необходимое"
+                        app:titleText="Что не включено" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/bg_screen_bottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clHotelSecond">
+
+                <FrameLayout
+                    android:id="@+id/llShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/bg_board"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvNumberSelection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="90dp"
+                        android:padding="20dp"
+                        android:text="@string/number_selection"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

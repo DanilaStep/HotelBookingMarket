@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BookingRow">
+        <attr name="titleText" format="string" />
+        <attr name="subtitleText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TouristView">
+        <attr name="TouristIcon" format="reference"/>
+        <attr name="titleTourist" format="string" />
+        <attr name="isExpanded" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="DataTouristRow">
+        <attr name="titleTextData" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="PaymentRow">
+        <attr name="titlePayment" format="string" />
+        <attr name="subtitlePayment" format="string" />
+        <attr name="subtitleTextColor" format="color"/>
+    </declare-styleable>
+
+
+</resources>

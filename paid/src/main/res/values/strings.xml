@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="OrderPaid">Заказ оплачен</string>
+    <string name="Order">Ваш заказ принят в работу</string>
+    <string name="Super">Супер!</string>
+    <string name="Party">🎉</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hotel">Отель</string>
+    <string name="money">от %s ₽</string>
+    <string name="about_hotel">Об отеле</string>
+    <string name="tree_line">3-я линия</string>
+    <string name="wi_fi">Платный Wi-Fi в фойе</string>
+    <string name="airport">30 км до аэропорта</string>
+    <string name="beach">1 км до пляжа</string>
+    <string name="number_selection">К вбору номера</string>
+    <string name="number_selectio3n">от %1 ₽</string>
+    <string name="five">5</string>
+    <string name="Perfect">Превосходно</string>
+</resources>
